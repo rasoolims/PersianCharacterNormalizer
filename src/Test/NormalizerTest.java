@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class NormalizerTest {
     public static void main(String[] args) throws IOException {
-        //path to map file
+        //path to map file (use the file charmap.txt)
         String mapFile="/Users/msr/Projects/PersianTextNormalizer/src/Test/charmap.txt";
         Normalizer normalizer=new Normalizer(mapFile);
         System.out.println("مي‌شود 1 ۲ 3");
