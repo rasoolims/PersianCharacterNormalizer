@@ -13,11 +13,24 @@ import java.io.IOException;
  */
 
 public class NormalizerTest {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         //path to map file (use the file charmap.txt)
         String mapFile="/Users/msr/Projects/PersianTextNormalizer/src/Test/charmap.txt";
+
+
+        if (args.length>=1){
+            mapFile=args[0];
+        }
+
         Normalizer normalizer=new Normalizer(mapFile);
         System.out.println("مي‌شود 1 ۲ 3");
-        System.out.print(normalizer.normalize("مي‌شود 1 ۲ 3"));
+        System.out.println(normalizer.normalize("مي‌شود 1 ۲ 3"));
+
+        if(args.length>=3){
+            String inputFile=args[1];
+            String outputFile=args[2];
+
+           normalizer.normalizeFile(inputFile,outputFile);
+        }
     }
 }
